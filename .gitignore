@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# OEIS bulk data and generated index are cached outside the repo by default,
+# but ignore them here too in case SEQPRIOR_CACHE ever points inside the repo.
+*.gz
+*.sqlite3
+/data/
+/cache/

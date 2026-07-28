@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seqprior"
+version = "0.1.0"
+description = "Offline prior-art search for integer sequences against the OEIS bulk data, using a battery of simple transforms (a local reimplementation of the matching idea behind OEIS Superseeker)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "seqprior contributors" }]
+dependencies = ["requests>=2.31"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+seqprior = "seqprior.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
